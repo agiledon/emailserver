@@ -22,13 +22,8 @@ public class MailingListServer {
         String listAddress = args[6];
         int interval = new Integer(args[7]).intValue();
 
-        Roster roster = null;
-        try {
-            roster = new FileRoster("roster.txt");
-        } catch (Exception e) {
-            System.err.println("unable to open roster.txt");
-            return;
-        }
+        Roster roster = RosterReader.readRoster();
+        if (RosterReader.isFailure()) return;
 
         try {
             do {

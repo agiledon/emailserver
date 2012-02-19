@@ -62,7 +62,16 @@
       <file leaf-file-name="MailingListServer.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/agiledon/agile/refactoring/email/MailingListServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="8" selection-start="772" selection-end="772" vertical-scroll-proportion="0.3989071">
+            <state line="25" column="35" selection-start="859" selection-end="859" vertical-scroll-proportion="0.36065573">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RosterReader.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/agiledon/agile/refactoring/email/RosterReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="36" selection-start="612" selection-end="612" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -139,6 +148,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/agiledon/agile/refactoring/email/HostInformation.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agiledon/agile/refactoring/email/FileRoster.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agiledon/agile/refactoring/email/MailingListServer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agiledon/agile/refactoring/email/RosterReader.java" />
       </list>
     </option>
   </component>
@@ -267,6 +277,9 @@
     <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="RosterReader" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.agiledon.agile.refactoring.email" />
     </key>
@@ -537,9 +550,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agiledon/agile/refactoring/email/RosterReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="36" selection-start="612" selection-end="612" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/agiledon/agile/refactoring/email/MailingListServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="8" selection-start="772" selection-end="772" vertical-scroll-proportion="0.3989071">
+        <state line="25" column="35" selection-start="859" selection-end="859" vertical-scroll-proportion="0.36065573">
           <folding />
         </state>
       </provider>
