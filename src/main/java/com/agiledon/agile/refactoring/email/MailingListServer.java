@@ -9,6 +9,11 @@ import javax.mail.internet.*;
 public class MailingListServer {
     public static final String SUBJECT_MARKER = "[list]";
     public static final String LOOP_HEADER = "X-LOOP";
+    private static Properties properties;
+    private static Session session;
+    private static Roster roster;
+    private static HostInformation host;
+    private static String listAddress;
 
     public static void main(String[] args) {
         if (args.length != 8) {
@@ -18,19 +23,20 @@ public class MailingListServer {
             return;
         }
 
-        HostInformation host = new HostInformation(args);
-        String listAddress = args[6];
+        host = new HostInformation(args);
+        listAddress = args[6];
         int interval = new Integer(args[7]).intValue();
 
-        Roster roster = RosterReader.readRoster();
+        roster = RosterReader.readRoster();
         if (RosterReader.isFailure()) return;
 
         try {
             do {
                 try {
 
-                    Properties properties = System.getProperties();
-                    Session session = Session.getDefaultInstance(properties, null);
+                    properties = System.getProperties();
+                    session = Session.getDefaultInstance(properties, null);
+
                     Store store = session.getStore("pop3");
                     store.connect(host.pop3Host, -1, host.pop3User, host.pop3Password);
                     Folder defaultFolder = store.getDefaultFolder();
@@ -48,23 +54,7 @@ public class MailingListServer {
                             Message[] messages = null;
 
                             messages = receiveMessages(folder);
-
-                            for (int i = 0; i < messages.length; i++) {
-                                Properties props = new Properties();
-                                Session smtpSession = Session.getDefaultInstance(props, null);
-                                Transport transport = smtpSession.getTransport("smtp");
-
-
-                                Message message = messages[i];
-
-                                if (isDeletedMessage(message)) continue;
-
-                                System.out.println("message received: " + message.getSubject());
-
-                                if (!roster.constainsOneOf(message.getFrom())) continue;
-
-                                sendMessage(host, listAddress, roster, session, props, transport, message);
-                            }
+                            sendMessages(messages);
                         }
                     } catch (Exception e) {
                         System.err.println("message handling error");
@@ -89,18 +79,22 @@ public class MailingListServer {
         }
     }
 
-    private static Message[] receiveMessages(Folder folder) throws MessagingException {
-        Message[] messages;
-        messages = folder.getMessages();
-        FetchProfile fp = new FetchProfile();
-        fp.add(FetchProfile.Item.ENVELOPE);
-        fp.add(FetchProfile.Item.FLAGS);
-        fp.add("X-Mailer");
-        folder.fetch(messages, fp);
-        return messages;
+    private static void sendMessages(Message[] messages) throws MessagingException, IOException {
+        for (int i = 0; i < messages.length; i++) {
+            Message message = messages[i];
+
+            if (isDeletedMessage(message)) continue;
+
+            System.out.println("message received: " + message.getSubject());
+
+            if (!roster.constainsOneOf(message.getFrom())) continue;
+
+            sendMessage(message);
+        }
     }
 
-    private static void sendMessage(HostInformation host, String listAddress, Roster roster, Session session, Properties props, Transport transport, Message message) throws MessagingException, IOException {
+    private static void sendMessage(Message message) throws MessagingException, IOException {
+        Transport transport = session.getTransport("smtp");
         MimeMessage forward = new MimeMessage(session);
         Address[] fromAddress = message.getFrom();
         InternetAddress from = null;
@@ -127,12 +121,23 @@ public class MailingListServer {
             forward.setText((String) content);
         }
 
-        props.put("mail.smtp.host", host.smtpHost);
+        properties.put("mail.smtp.host", host.smtpHost);
 
 
         transport.connect(host.smtpHost, host.smtpUser, host.smtpPassword);
         transport.sendMessage(forward, roster.getAddresses());
         message.setFlag(Flags.Flag.DELETED, true);
+    }
+
+    private static Message[] receiveMessages(Folder folder) throws MessagingException {
+        Message[] messages;
+        messages = folder.getMessages();
+        FetchProfile fp = new FetchProfile();
+        fp.add(FetchProfile.Item.ENVELOPE);
+        fp.add(FetchProfile.Item.FLAGS);
+        fp.add("X-Mailer");
+        folder.fetch(messages, fp);
+        return messages;
     }
 
     private static boolean isDeletedMessage(Message message) throws MessagingException {
