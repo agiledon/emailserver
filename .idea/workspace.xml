@@ -62,7 +62,7 @@
       <file leaf-file-name="MailingListServer.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/agiledon/agile/refactoring/email/MailingListServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="35" selection-start="859" selection-end="859" vertical-scroll-proportion="0.36065573">
+            <state line="45" column="35" selection-start="1779" selection-end="1779" vertical-scroll-proportion="-0.5027322">
               <folding />
             </state>
           </provider>
@@ -147,8 +147,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/agiledon/agile/refactoring/email/Roster.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agiledon/agile/refactoring/email/HostInformation.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agiledon/agile/refactoring/email/FileRoster.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/agiledon/agile/refactoring/email/MailingListServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agiledon/agile/refactoring/email/RosterReader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agiledon/agile/refactoring/email/MailingListServer.java" />
       </list>
     </option>
   </component>
@@ -559,7 +559,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/agiledon/agile/refactoring/email/MailingListServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="35" selection-start="859" selection-end="859" vertical-scroll-proportion="0.36065573">
+        <state line="45" column="35" selection-start="1779" selection-end="1779" vertical-scroll-proportion="-0.5027322">
           <folding />
         </state>
       </provider>
