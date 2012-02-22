@@ -62,18 +62,10 @@
       <file leaf-file-name="MailingListServer.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/agiledon/agile/refactoring/email/MailingListServer.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <state line="35" column="20" selection-start="1086" selection-end="1086" vertical-scroll-proportion="0.5081967">
+            <state line="24" column="35" selection-start="823" selection-end="823" vertical-scroll-proportion="0.26229507">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-=======
-=======
->>>>>>> parent of 3f6ec03... extract receiveMessages() and sendMessage() methods
-            <state line="45" column="35" selection-start="1779" selection-end="1779" vertical-scroll-proportion="-0.5027322">
-              <folding />
->>>>>>> parent of 3f6ec03... extract receiveMessages() and sendMessage() methods
             </state>
           </provider>
         </entry>
@@ -90,7 +82,7 @@
       <file leaf-file-name="Session.class" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/javax/mail/mailapi/1.4.3/mailapi-1.4.3.jar!/javax/mail/Session.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="135" selection-end="135" vertical-scroll-proportion="-3.0">
+            <state line="5" column="0" selection-start="135" selection-end="135" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -99,7 +91,7 @@
       <file leaf-file-name="FileRoster.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/agiledon/agile/refactoring/email/FileRoster.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="20" selection-start="245" selection-end="245" vertical-scroll-proportion="-6.6">
+            <state line="11" column="20" selection-start="245" selection-end="245" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -135,7 +127,7 @@
       <file leaf-file-name="HostInformation.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/agiledon/agile/refactoring/email/HostInformation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="11" selection-start="267" selection-end="267" vertical-scroll-proportion="-6.6">
+            <state line="11" column="11" selection-start="267" selection-end="267" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -268,23 +260,23 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Favorites" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="OverrideImplement.combined" value="true" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="preferences.pluginManager" />
+    <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveMembersDialog.RECENTS_KEY">
@@ -295,18 +287,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
       <module name="" />
       <setting name="path" value="" />
@@ -318,6 +298,18 @@
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
@@ -447,7 +439,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1280" height="716" extended-state="6" />
+    <frame x="37" y="24" width="1280" height="716" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -517,6 +509,30 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="21" selection-start="467" selection-end="467" vertical-scroll-proportion="0.34351146" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agiledon/agile/refactoring/email/RosterReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="36" selection-start="612" selection-end="612" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/mail/mailapi/1.4.3/mailapi-1.4.3.jar!/javax/mail/Session.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="135" selection-end="135" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agiledon/agile/refactoring/email/FileRoster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="20" selection-start="245" selection-end="245" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/agiledon/agile/refactoring/email/Roster.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="29" selection-start="325" selection-end="325" vertical-scroll-proportion="0.0" />
@@ -532,55 +548,19 @@
         <state line="11" column="38" selection-start="252" selection-end="262" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agiledon/agile/refactoring/email/FileRoster.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="20" selection-start="245" selection-end="245" vertical-scroll-proportion="-6.6">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="21" selection-start="467" selection-end="467" vertical-scroll-proportion="0.34351146">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/agiledon/agile/refactoring/email/HostInformation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="11" selection-start="267" selection-end="267" vertical-scroll-proportion="-6.6">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/mail/mailapi/1.4.3/mailapi-1.4.3.jar!/javax/mail/Session.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="135" selection-end="135" vertical-scroll-proportion="-3.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agiledon/agile/refactoring/email/RosterReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="36" selection-start="612" selection-end="612" vertical-scroll-proportion="0.0">
+        <state line="11" column="11" selection-start="267" selection-end="267" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/agiledon/agile/refactoring/email/MailingListServer.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <state line="35" column="20" selection-start="1086" selection-end="1086" vertical-scroll-proportion="0.5081967">
+        <state line="24" column="35" selection-start="823" selection-end="823" vertical-scroll-proportion="0.26229507">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-=======
-=======
->>>>>>> parent of 3f6ec03... extract receiveMessages() and sendMessage() methods
-        <state line="45" column="35" selection-start="1779" selection-end="1779" vertical-scroll-proportion="-0.5027322">
-          <folding />
->>>>>>> parent of 3f6ec03... extract receiveMessages() and sendMessage() methods
         </state>
       </provider>
     </entry>
