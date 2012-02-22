@@ -33,11 +33,14 @@ public class MailingListServer {
             do {
                 try {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                     properties = System.getProperties();
                     session = Session.getDefaultInstance(properties, null);
 
 =======
+=======
+>>>>>>> parent of 3f6ec03... extract receiveMessages() and sendMessage() methods
                     Properties properties = System.getProperties();
                     Session session = Session.getDefaultInstance(properties, null);
 >>>>>>> parent of 3f6ec03... extract receiveMessages() and sendMessage() methods
@@ -55,11 +58,14 @@ public class MailingListServer {
                     try {
                         if (folder.getMessageCount() != 0) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                             Message[] messages = null;
 
                             messages = receiveMessages(folder);
                             sendMessages(messages);
 =======
+=======
+>>>>>>> parent of 3f6ec03... extract receiveMessages() and sendMessage() methods
                             Message[] messages = folder.getMessages();
                             FetchProfile fp = new FetchProfile();
                             fp.add(FetchProfile.Item.ENVELOPE);
@@ -81,6 +87,7 @@ public class MailingListServer {
                                 forward.setReplyTo(new Address[]{
                                         new InternetAddress(listAddress)
                                 });
+<<<<<<< HEAD
 
                                 forward.addRecipients(Message.RecipientType.BCC, roster.getAddresses());
                                 String subject = message.getSubject();
@@ -100,6 +107,27 @@ public class MailingListServer {
                                 Properties props = new Properties();
                                 props.put("mail.smtp.host", host.smtpHost);
 
+=======
+
+                                forward.addRecipients(Message.RecipientType.BCC, roster.getAddresses());
+                                String subject = message.getSubject();
+                                if (-1 == message.getSubject().indexOf(SUBJECT_MARKER)) {
+                                    subject = SUBJECT_MARKER + " " + message.getSubject();
+                                }
+                                forward.setSubject(subject);
+                                forward.setSentDate(message.getSentDate());
+                                forward.addHeader(LOOP_HEADER, listAddress);
+                                Object content = message.getContent();
+                                if (content instanceof Multipart) {
+                                    forward.setContent((Multipart) content);
+                                } else {
+                                    forward.setText((String) content);
+                                }
+
+                                Properties props = new Properties();
+                                props.put("mail.smtp.host", host.smtpHost);
+
+>>>>>>> parent of 3f6ec03... extract receiveMessages() and sendMessage() methods
                                 Session smtpSession = Session.getDefaultInstance(props, null);
                                 Transport transport = smtpSession.getTransport("smtp");
                                 transport.connect(host.smtpHost, host.smtpUser, host.smtpPassword);
@@ -131,6 +159,7 @@ public class MailingListServer {
         }
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     private static void sendMessages(Message[] messages) throws MessagingException, IOException {
         for (int i = 0; i < messages.length; i++) {
@@ -197,6 +226,8 @@ public class MailingListServer {
         return message.getFlags().contains(Flags.Flag.DELETED);
     }
 
+=======
+>>>>>>> parent of 3f6ec03... extract receiveMessages() and sendMessage() methods
 =======
 >>>>>>> parent of 3f6ec03... extract receiveMessages() and sendMessage() methods
 }
