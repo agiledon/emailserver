@@ -19,9 +19,4 @@ public class TestEmailForwarder {
         EmailServerListener listener = mock(EmailServerListener.class);
 
     }
-
-
-
-
-
 }
